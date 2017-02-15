@@ -20,16 +20,6 @@ load()->func('communication');
 load()->func('file');
 include MODULE_ROOT . '/inc/common.php';
 include_once IA_ROOT . '/framework/library/emoji/emoji.php';
-include_once IA_ROOT . '/framework/library/wxconfig/wxconfig.php';
-$options = array(
-    'debug'=>true,
-    'appid'=>'wxf2b8ba0cdd7dd509',
-    'appsecret'=>'cfc30c527f61869a15ea6801379f788e',
-);
-	
-$weObj = new \wxconfig($options);
-
-$signPackage = $weObj->getSignPackage();
 $rid = intval( $_GPC['id'] );
 $uniacid = $_W['uniacid'];
 $openid = $_W['openid'];
